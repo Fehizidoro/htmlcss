@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mundo da Lua - Viagens</title>
+
+  <!-- Ícones (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    :root{
+      --azul:#0b2c66;
+      --azul-escuro:#092552;
+      --cinza:#666;
+      --sombra:0 2px 8px rgba(0,0,0,.12);
+      --raio:10px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:0; background:#f2f2f2; color:#333;
+    }
+
+    /* Header */
+    header{
+      background:var(--azul);
+      color:#fff; text-align:center; padding:24px 16px;
+    }
+    header h1{margin:0}
+    header h2{margin:6px 0 0 0; font-weight:400}
+
+    /* Nav com ícones */
+    nav{
+      display:flex; flex-wrap:wrap; justify-content:center; gap:36px;
+      padding:14px 10px; background:#fff; border-bottom:1px solid #e6e6e6;
+    }
+    nav a{
+      text-decoration:none; color:#333; font-size:14px; text-align:center;
+      display:inline-flex; flex-direction:column; align-items:center; gap:6px;
+      transition:.2s transform, .2s color;
+    }
+    nav a i{font-size:20px}
+    nav a:hover{ color:var(--azul); transform:translateY(-2px) }
+
+    /* Hero */
+    .hero{
+      background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      color:#fff; text-align:center; padding:80px 20px;
+    }
+    .hero h2{
+      font-size:2.1rem; margin:0 0 18px 0; text-shadow:1px 1px 4px rgba(0,0,0,.6);
+    }
+    .cta{
+      display:flex; gap:12px; justify-content:center; flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-block; padding:12px 20px; border-radius:8px;
+      background:var(--azul); color:#fff; text-decoration:none; transition:.25s;
+      box-shadow: var(--sombra);
+    }
+    .btn:hover{ background:var(--azul-escuro) }
+
+    /* Seções */
+    .section{ max-width:1200px; margin: 40px auto; padding:0 20px; }
+    .section h2{
+      text-align:center; color:var(--azul); margin:0 0 20px 0; position:relative;
+      display:inline-block; left:50%; transform:translateX(-50%);
+    }
+    .section h2::after{
+      content:"▌▌▌"; position:absolute; right:-48px; top:50%; transform:translateY(-50%);
+      font-size:18px; color:var(--azul);
+    }
+
+    /* Cards */
+    .viagens{
+      display:grid; gap:20px; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    }
+    .card{
+      background:#fff; border-radius:var(--raio); overflow:hidden; box-shadow:var(--sombra);
+      transition: transform .2s ease;
+    }
+    .card:hover{ transform:scale(1.02) }
+    .card h3{ margin:14px 14px 6px 14px }
+    .card p{ margin:0 14px 16px 14px; color:var(--cinza); font-size:14px }
+
+    /* Botões abaixo dos destinos */
+    .botoes-viagem{
+      text-align:center; margin-top:28px;
+    }
+    .botoes-viagem .btn{ margin:6px 8px }
+
+    /* Minhas Viagens */
+    #minhas-viagens p{ text-align:center; color:#444; margin:0 0 14px 0 }
+
+    /* Rodapé */
+    footer{
+      margin-top:40px; background:var(--azul); color:#fff; text-align:center; padding:16px;
+    }
+
+    @media (max-width:500px){
+      .section h2::after{ display:none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mundo da Lua</h1>
+    <h2>As melhores viagens para você!</h2>
+  </header>
+
+  <!-- Menu com ícones -->
+  <nav>
+    <a href="#hospedagens"><i class="fa-solid fa-bed"></i>Hospedagens</a>
+    <a href="#passagens"><i class="fa-solid fa-plane"></i>Passagens</a>
+    <a href="#pacotes"><i class="fa-solid fa-suitcase"></i>Pacotes</a>
+    <a href="#ofertas"><i class="fa-solid fa-percent"></i>Ofertas</a>
+    <a href="#aluguueis"><i class="fa-solid fa-house"></i>Aluguéis</a>
+    <a href="#passeios"><i class="fa-solid fa-ticket"></i>Passeios</a>
+    <a href="#carros"><i class="fa-solid fa-car"></i>Carros</a>
+    <a href="#cruzeiros"><i class="fa-solid fa-ship"></i>Cruzeiros</a>
+    <a href="#seguros"><i class="fa-solid fa-shield"></i>Seguros</a>
+  </nav>
+
+  <!-- Hero com Cadastro + Entrar -->
+  <section class="hero">
+    <h2>Descubra o mundo com conforto e economia</h2>
+    <div class="cta">
+      <a href="#cadastro" class="btn">Faça seu Cadastro</a>
+      <a href="#entrar" class="btn">Entrar</a>
+    </div>
+  </section>
+
+  <!-- Destinos -->
+  <section class="section" id="viagens">
+    <h2>Destinos em Destaque</h2>
+
+    <div class="viagens">
+      <div class="card">
+        <h3>Fortaleza</h3><p>Pacotes a partir de R$ 1.200</p>
+      </div>
+      <div class="card">
+        <h3>Gramado</h3><p>Pacotes a partir de R$ 1.500</p>
+      </div>
+      <div class="card">
+        <h3>Rio de Janeiro</h3><p>Pacotes a partir de R$ 900</p>
+      </div>
+      <div class="card">
+        <h3>Salvador</h3><p>Pacotes a partir de R$ 1.100</p>
+      </div>
+      <div class="card">
+        <h3>Miami</h3><p>Pacotes a partir de R$ 3.000</p>
+      </div>
+      <div class="card">
+        <h3>Paris</h3><p>Pacotes a partir de R$ 4.200</p>
+      </div>
+      <div class="card">
+        <h3>Cancún</h3><p>Pacotes a partir de R$ 3.500</p>
+      </div>
+      <div class="card">
+        <h3>Tóquio</h3><p>Pacotes a partir de R$ 5.000</p>
+      </div>
+      <div class="card">
+        <h3>Orlando</h3><p>Pacotes a partir de R$ 3.800</p>
+      </div>
+      <div class="card">
+        <h3>Lisboa</h3><p>Pacotes a partir de R$ 3.900</p>
+      </div>
+      <div class="card">
+        <h3>Veneza</h3><p>Pacotes a partir de R$ 4.500</p>
+      </div>
+      <div class="card">
+        <h3>Londres</h3><p>Pacotes a partir de R$ 4.800</p>
+      </div>
+      <div class="card">
+        <h3>Buenos Aires</h3><p>Pacotes a partir de R$ 2.200</p>
+      </div>
+      <div class="card">
+        <h3>Maldivas</h3><p>Pacotes a partir de R$ 6.500</p>
+      </div>
+      <div class="card">
+        <h3>Dubai</h3><p>Pacotes a partir de R$ 6.000</p>
+      </div>
+      <div class="card">
+        <h3>Atenas</h3><p>Pacotes a partir de R$ 4.300</p>
+      </div>
+      <div class="card" id="cruzeiros">
+        <h3>Cruzeiros</h3><p>Pacotes a partir de R$ 2.800</p>
+      </div>
+    </div>
+
+    <!-- Botões geral (depois de todos os destinos) -->
+    <div class="botoes-viagem">
+      <a href="#nacional" class="btn">Viagens Nacionais</a>
+      <a href="#internacional" class="btn">Viagens Internacionais</a>
+    </div>
+  </section>
+
+  <!-- Minhas Viagens -->
+  <section class="section" id="minhas-viagens">
+    <h2>Minhas Viagens</h2>
+    <p>Acompanhe e gerencie suas viagens reservadas com a gente!</p>
+    <div style="text-align:center">
+      <a href="#login" class="btn">Ver Minhas Viagens</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mundo da Lua - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
