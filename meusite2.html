@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Livraria Clássica</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fdf6e3;
+      color: #4b3b2b;
+      line-height: 1.6;
+    }
+
+    /* Top bar */
+    .top-bar {
+      background-color: #a67c52;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-size: 0.9rem;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #d9c8b4;
+      border-bottom: 2px solid #a67c52;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #4b3b2b;
+      letter-spacing: 0.15em;
+      font-family: 'Georgia', serif;
+      text-shadow: 1px 1px 2px #a67c52;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #4b3b2b;
+      font-weight: 600;
+      font-size: 1rem;
+      padding-bottom: 4px;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      border-bottom: 3px solid #a67c52;
+      color: #a67c52;
+    }
+
+    /* Banner */
+    .banner {
+      background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fdf6e3;
+      text-shadow: 2px 2px 5px #4b3b2b;
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      font-family: 'Georgia', serif;
+      margin-bottom: 40px;
+    }
+
+    /* Destaques de livros */
+    .destaques {
+      max-width: 1100px;
+      margin: 0 auto 60px auto;
+      padding: 0 20px;
+    }
+
+    .destaques h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #4b3b2b;
+      border-left: 6px solid #a67c52;
+      padding-left: 12px;
+    }
+
+    .livros-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 25px;
+    }
+
+    .livro-card {
+      background-color: #fff8e1;
+      border: 1px solid #a67c52;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(166,124,82,0.2);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .livro-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(166,124,82,0.4);
+    }
+
+    .livro-img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .livro-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .livro-info h3 {
+      color: #4b3b2b;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .livro-info p {
+      font-size: 0.95rem;
+      color: #7e6649;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .livro-info span {
+      font-weight: 700;
+      color: #a67c52;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #d9c8b4;
+      color: #4b3b2b;
+      text-align: center;
+      padding: 20px 0;
+      font-weight: 600;
+      border-top: 2px solid #a67c52;
+      letter-spacing: 0.05em;
+      font-size: 0.9rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 650px) {
+      .banner {
+        font-size: 2rem;
+        height: 250px;
+        padding: 0 10px;
+        text-align: center;
+      }
+
+      .livro-img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    Fale conosco: (21) 1234-5678 | contato@livrariaclassica.com.br
+  </div>
+
+  <header>
+    <div class="logo">LIVRARIA CLÁSSICA</div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Catálogo</a></li>
+        <li><a href="#">Lançamentos</a></li>
+        <li><a href="#">Autores</a></li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    Descubra Seu Próximo Livro Favorito
+  </section>
+
+  <section class="destaques">
+    <h2>Destaques da Semana</h2>
+    <div class="livros-grid">
+      <div class="livro-card">
+        <img class="livro-img" src="https://images-na.ssl-images-amazon.com/images/I/81eB+7+CkUL.jpg" alt="Livro 1"/>
+        <div class="livro-info">
+          <h3>Dom Casmurro</h3>
+          <p>Machado de Assis</p>
+          <span>R$ 39,90</span>
+        </div>
+      </div>
+      <div class="livro-card">
+        <img class="livro-img" src="https://images-na.ssl-images-amazon.com/images/I/91SZSW8qSsL.jpg" alt="Livro 2"/>
+        <div class="livro-info">
+          <h3>O Pequeno Príncipe</h3>
+          <p>Antoine de Saint-Exupéry</p>
+          <span>R$ 29,90</span>
+        </div>
+      </div>
+      <div class="livro-card">
+        <img class="livro-img" src="https://images-na.ssl-images-amazon.com/images/I/81OxWMiN8jL.jpg" alt="Livro 3"/>
+        <div class="livro-info">
+          <h3>1984</h3>
+          <p>George Orwell</p>
+          <span>R$ 44,90</span>
+        </div>
+      </div>
+      <div class="livro-card">
+        <img class="livro-img" src="https://images-na.ssl-images-amazon.com/images/I/71KilybDOoL.jpg" alt="Livro 4"/>
+        <div class="livro-info">
+          <h3>Grande Sertão: Veredas</h3>
+          <p>João Guimarães Rosa</p>
+          <span>R$ 42,00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Livraria Clássica - Todos os direitos reservados.
+  </footer>
+</body>
+</html>
+
+
+
