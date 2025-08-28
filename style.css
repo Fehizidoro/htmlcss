@@ -1,44 +1,22 @@
-/* Estilos para o título */
-h1 {
-    color:#FF007F;          /* cor do título */
-    font-size: 45px;       /* tamanho da fonte */
-    text-align: center;    /* alinhamento */
+body{
+    background-color: white;
+    font-family: Arial;
 }
-
-/* Estilos para o parágrafo */
-p {
-    color:#ffffff;     /* cor do parágrafo */
-    font-size: 22px;       /* tamanho da fonte */
-    text-align: justify;   /* alinhamento */
-}
-/* Fundo da página */
-body {
-    background-color: #000000; /* Bege */
-    font-family: Arial, sans-serif;
+.container{
+    background-color: rgb(224, 224, 224);
+    padding: 20px;
     margin: 20px;
 }
-
-/* Título principal */
-h1 {
-    text-align: center;
-    color:#eedede /* roxo */
+button{
+    background-color:#dc569b;
+    color: black;
+    padding: 10px;
+    margin: 5px;
+    border: None;
 }
 
-/* Subtítulo */
-h2 {
-    text-align: left;
-    color: #5656a6; /* Verde escuro */
-}
-
-/* Parágrafo justificado */
-p.justificado {
-    text-align: justify;
-    color:#5656a6; /* Azul escuro */
-}
-
-/* Parágrafo alinhado à direita */
-p.direita {
-    text-align: right;
-    font-size: 20px;
-    color:#5656a6; /* Roxo */
+.formulario{
+    background-color: #c6c2c2;
+    padding: 15px;
+    margin: 10px;
 }
