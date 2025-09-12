@@ -1,104 +1,19 @@
-p {
-  color: blue
+body{
+    background-color: antiquewhite;
 }
-
-#titulo-principal {
-  background: yellow
+.pai{
+    background-color: aqua;
+    overflow: auto;
 }
-
-.subtitulo {
-  color: green
+.container{
+    background-color: inherit;
+    padding: 15px;
+    margin: 20px;
+    border: 2px solid black;
+    width: 500px;
+    float: right;
 }
-
-ul li {
-  color: red
-}
-
-#classe1 {
-  background-color: aqua
-}
-#classe2 {
-  background-color:aliceblue
-}
-
-#classe3 {
-  background-color: aliceblue
-}
-p, h2, h3 {
-  font-family: Verdana
-}
-
-#centralizado {
-  text-align: center
-}
-
-#link-google {
-  color: orange
-}
-#link-youtube {
-  color: purple
-}
-
-.negrito {
-  font-weight: bold
-}
-
-img {
-  border: 2px solid black
-}
-
-div p {
-  color: brown
-}
-
-.primeiro {
-  color: darkcyan
-}
-.segundo {
-  color: darkred
-}
-
-#fonte-arial {
-  font-family: Arial, sans-serif
-}
-
-.bold {
-  font-weight: bold
-}
-.italic {
-  font-style: italic
-}
-.underline {
-  text-decoration: underline
-}
-
-div h3 {
-  color: darkgreen
-}
-
-#div1 {
-  background: red
-}
-#div2 {
-  background: green
-}
-#div3 {
-  background: blue
-}
-
-.destaque {
-  color: gold
-}
-
-#caixa-colorida {
-  background: lightgray;
-  border: 2px solid black
-}
-
-.sublinhado {
-  text-decoration: underline
-}
-
-h1, p, a {
-  color: navy
+img{
+    height: 200px;
+    border-radius: 10px;
 }
